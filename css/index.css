@@ -1,0 +1,230 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+
+/* 目录 */
+
+.catalogue {
+    width: 100%;
+    height: 100%;
+    /* 渐变背景 */
+    background: linear-gradient(200deg, #ec77ab, #7873f5);
+    position: fixed;
+    /*将div裁剪成一个圆形，直径为25px 坐标在--x，--y ，35 , 35自定义的一个坐标*/
+    clip-path: circle(25px at var(--x) var(--y));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.addTo {
+    /* 裁剪100%的圆形 */
+    clip-path: circle(100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.catalogue ul li {
+    list-style: none;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    font-weight: 500;
+}
+
+.catalogue ul li a {
+    text-decoration: none;
+    color: white
+}
+
+.catalogue ul li a:hover {
+    color: red;
+}
+
+.lcon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(200deg, #fc7cb5, #655ffd);
+    overflow: hidden;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.lcon>img:first-child {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    /* 其他元素(除了自己)可以拖拽 */
+    -webkit-user-drag: none;
+}
+
+.lcon>img:last-child {
+    width: 60px;
+    height: 60px;
+    display: none;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    /* 其他元素(除了自己)可以拖拽 */
+    -webkit-user-drag: none;
+}
+
+
+/* 网站背景 */
+
+.bg {
+    background-image: url(../imges/背景图片.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 630px;
+    position: fixed;
+    z-index: -999;
+}
+
+
+/* 页面 */
+
+.page {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 返回顶部 */
+
+.backToTop {
+    position: absolute;
+    top: -50px;
+    left: 93%;
+    /* 旋转180度 */
+    transform: rotate(180deg);
+    transition: all 0.5s ease-in-out;
+}
+
+.backToTop img {
+    width: 40px;
+    height: 40px;
+}
+
+
+/* 页面头部 */
+
+.pageHead {
+    width: 100%;
+    height: 100vh;
+    /* 弹性式布局 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pageHead>div:first-child {
+    font-size: 30px;
+    position: absolute;
+    color: white;
+}
+
+.pageHead>div:last-child {
+    font-size: 20px;
+    position: absolute;
+    margin-top: 55px;
+    color: white;
+}
+
+
+/* 页面主体 */
+
+.pageBody {
+    max-width: 70%;
+    margin: auto;
+    height: 1600px;
+    display: block;
+}
+
+.pageBody>div:first-child {
+    color: white;
+    font-size: 18px;
+}
+
+
+/* 图片集 */
+
+.atlas {
+    width: 100%;
+    height: 1550px;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 5% 8% 8% 5%;
+}
+
+.scrollatlas {
+    /* 给div添加滚动条 */
+    overflow: scroll;
+    width: 100%;
+    height: 1550px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.scrollatlas ul {
+    float: left;
+    width: 20%;
+}
+
+.scrollatlas ul li {
+    list-style: none;
+}
+
+.scrollatlas ul li div {
+    border: #999 solid 1px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    border-radius: 12%;
+    overflow: hidden;
+}
+
+.scrollatlas ul li div img {
+    width: 100%;
+    height: 100%;
+    margin-top: 3px;
+}
+
+
+/* 页面尾部 */
+
+.pageFoot {
+    width: 100%;
+    height: 20%;
+    background-color: rgb(215 219 247);
+    /* 弹性式布局 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../imges/7.22.jpeg);
+    background-repeat: no-repeat;
+    background-position: 0px -290px;
+}
+
+.pageFoot ul li {
+    list-style: none;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
